@@ -1,0 +1,75 @@
+---
+layout: default
+---
+
+<section class="hero">
+  <div class="hero__copy">
+    <p class="eyebrow">Daily research notes</p>
+    <h1>{{ page.title | default: site.title | escape }}</h1>
+    <p class="hero__summary">{{ site.description | escape }}</p>
+  </div>
+
+  <div class="signal-panel" aria-hidden="true">
+    <div class="signal-panel__top">
+      <span>signal</span>
+      <span>{{ site.time | date: "%Y.%m.%d" }}</span>
+    </div>
+    <div class="signal-chart">
+      <span style="--h: 38%"></span>
+      <span style="--h: 62%"></span>
+      <span style="--h: 48%"></span>
+      <span style="--h: 76%"></span>
+      <span style="--h: 54%"></span>
+      <span style="--h: 88%"></span>
+      <span style="--h: 67%"></span>
+      <span style="--h: 94%"></span>
+      <span style="--h: 72%"></span>
+      <span style="--h: 82%"></span>
+      <span style="--h: 58%"></span>
+      <span style="--h: 70%"></span>
+    </div>
+    <div class="signal-panel__bottom">
+      <span>posts {{ site.posts | size }}</span>
+      <span>ai/data/systems</span>
+    </div>
+  </div>
+</section>
+
+{% assign body_content = content | strip %}
+{% if body_content != "" %}
+  <section class="page-intro">
+    {{ content }}
+  </section>
+{% endif %}
+
+<section class="post-index" aria-labelledby="latest-notes">
+  <div class="section-heading">
+    <p class="eyebrow">Notebook</p>
+    <h2 id="latest-notes">Latest Insights</h2>
+  </div>
+
+  {% if site.posts.size > 0 %}
+    <div class="post-list">
+      {% for post in site.posts %}
+        <article class="post-row">
+          <a class="post-row__link" href="{{ post.url | relative_url }}">
+            <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%Y.%m.%d" }}</time>
+            <div>
+              <h3>{{ post.title | escape }}</h3>
+              <p>{{ post.excerpt | strip_html | normalize_whitespace | truncate: 160 }}</p>
+              {% if post.tags.size > 0 %}
+                <ul class="tag-list" aria-label="Tags">
+                  {% for tag in post.tags %}
+                    <li>#{{ tag }}</li>
+                  {% endfor %}
+                </ul>
+              {% endif %}
+            </div>
+          </a>
+        </article>
+      {% endfor %}
+    </div>
+  {% else %}
+    <p class="empty-state">아직 공개된 인사이트가 없습니다.</p>
+  {% endif %}
+</section>
