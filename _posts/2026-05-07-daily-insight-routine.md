@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "하루에 인사이트 하나씩 쌓기"
-date: 2026-05-07 21:00:00 +0900
+date: 2026-05-07 20:00:00 +0900
 categories: insight
 tags: [codex, writing, github-pages]
 ---
