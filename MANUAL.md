@@ -1,6 +1,6 @@
-# GitHub Pages Daily Insights 작업 이해 매뉴얼
+# GitHub Pages Jisung Log 작업 이해 매뉴얼
 
-이 문서는 `jseongchoi.github.io` 저장소에 만든 Daily Insights 블로그가
+이 문서는 `jseongchoi.github.io` 저장소에 만든 Jisung Log 블로그가
 어떤 흐름으로 만들어졌고, 앞으로 어떻게 운영하면 되는지 이해하기 위한 기록입니다.
 
 ## 1. 목표를 정했다

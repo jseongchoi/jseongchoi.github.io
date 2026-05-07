@@ -1,4 +1,4 @@
-# Daily Insights
+# Jisung Log
 
 하루에 하나씩 기술과 일의 인사이트를 쌓는 GitHub Pages 블로그입니다.
 
