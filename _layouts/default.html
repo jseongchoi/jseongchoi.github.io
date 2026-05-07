@@ -15,7 +15,9 @@
     <header class="site-header">
       <div class="site-header__inner">
         <a class="site-brand" href="{{ '/' | relative_url }}" aria-label="{{ site.title | escape }} home">
-          <span class="site-brand__mark"></span>
+          <span class="site-brand__avatar-wrap" aria-hidden="true">
+            <img class="site-brand__avatar" src="{{ '/profile.png' | relative_url }}" alt="">
+          </span>
           <span>
             <strong>{{ site.title | escape }}</strong>
             <small>{{ site.author.name | default: site.author | default: 'Jiseong Choi' }}</small>
