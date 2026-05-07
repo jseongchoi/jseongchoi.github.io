@@ -1,0 +1,13 @@
+title: Daily Insights
+description: 하루에 하나씩 쌓는 기술과 일의 인사이트
+url: "https://jseongchoi.github.io"
+baseurl: ""
+theme: minima
+lang: ko-KR
+timezone: Asia/Seoul
+author:
+  name: Jiseong Choi
+show_excerpts: true
+header_pages:
+  - about.md
+permalink: /:year/:month/:day/:title/
